@@ -55,3 +55,21 @@ web-app-client-demo/src/main/resources/data-dev.sql
 web-app-client-demo/src/main/resources/data-prod.sql
 web-app-client-demo/src/main/resources/update.sql
 web-app-client-demo/src/main/resources/schema.sql 
+
+# Bỏ qua toàn bộ thư mục chứa ảnh/video lớn
+Picture/
+
+# Bỏ qua các file ảnh/video lớn ở mọi nơi trong project
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.bmp
+*.svg
+*.tiff
+*.ico 
