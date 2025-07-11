@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: consul-example
+  cloud:
+    config:
+      enabled: false
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        metadata:
+          management-context-path: /foo
+          health-path: /ping
+          user-name: user
+          user-password: password
+  profiles:
+    active:
+      - secure
+  boot:
+    admin:
+      discovery:
+        ignored-services: consul
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      path-mapping:
+        health: /ping
+      base-path: /foo
+  endpoint:
+    health:
+      show-details: ALWAYS

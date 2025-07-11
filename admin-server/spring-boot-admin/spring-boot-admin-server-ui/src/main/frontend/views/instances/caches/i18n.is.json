@@ -1,0 +1,11 @@
+{
+  "instances": {
+    "caches": {
+      "label": "Skyndiminni",
+      "cache_manager": "Skyndiminnastjórnandi",
+      "loading_caches": "Skyndiminnaupplýsingar eru að hlaða…",
+      "name": "Nafn",
+      "no_caches_found": "Engar skyndiminnaupplýsingar eru í boði."
+    }
+  }
+}

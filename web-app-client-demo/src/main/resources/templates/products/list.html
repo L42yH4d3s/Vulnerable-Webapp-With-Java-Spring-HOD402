@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>Products</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-card h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .price {
+            font-size: 1.2em;
+            color: #007bff;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .seller {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: #007bff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .nav-link:hover {
+            background: #e9ecef;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        .description {
+            color: #555;
+            margin: 10px 0;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Products</h2>
+            <div>
+                <a th:href="@{/products/search}" class="nav-link">🔍 Search Products</a>
+                <a th:href="@{/products/recommendations}" class="nav-link">🤖 AI Recommendations</a>
+                <a th:href="@{/home}" class="nav-link">Back to Home</a>
+                <span sec:authorize="hasAnyRole('SELLER', 'ADMIN')">
+                    <a th:href="@{/products/manage}" class="nav-link">Manage Products</a>
+                </span>
+            </div>
+        </div>
+        
+        <div th:if="${not #lists.isEmpty(products)}" class="product-grid">
+            <div th:each="product : ${products}" class="product-card">
+                <h3 th:text="${product.name}">Product Name</h3>
+                <p class="description" th:text="${product.description}">Description</p>
+                <div class="price" th:text="'$' + ${#numbers.formatDecimal(product.price, 1, 2)}">$0.00</div>
+                <div class="seller" th:text="'Seller: ' + ${product.seller.username}">Seller</div>
+            </div>
+        </div>
+        
+        <div th:if="${#lists.isEmpty(products)}" class="empty-state">
+            <h3>No Products Available</h3>
+            <p>Check back later for new products!</p>
+        </div>
+    </div>
+</body>
+</html> 

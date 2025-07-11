@@ -1,0 +1,57 @@
+{
+  "instances": {
+    "details": {
+      "label": "Détails",
+      "cache": {
+        "hit_ratio": "Hit ratio",
+        "hits": "Hits",
+        "size": "Taille"
+      },
+      "datasource": {
+        "active_connections": "Connexions actives",
+        "min_connections": "Connexions min",
+        "max_connections": "Connexions max",
+        "title": "Datasource: {datasource}",
+        "unlimited": "illimité"
+      },
+      "gc": {
+        "count": "Count",
+        "time_spent_max": "Temps max passé",
+        "time_spent_total": "Total du temps passé",
+        "title": "Pauses du Garbage Collector"
+      },
+      "health": {
+        "title": "État"
+      },
+      "info": {
+        "no_info_provided": "Aucune infos fournies.",
+        "title": "Info"
+      },
+      "memory": {
+        "max": "Max",
+        "metaspace": "Métaspace",
+        "size": "Taille",
+        "title": "Memoire",
+        "used": "Utilisé"
+      },
+      "metadata": {
+        "no_data_provided": "Aucune métadonnées fournies.",
+        "title": "Métadonnées"
+      },
+      "process": {
+        "cpus": "CPUs",
+        "pid": "PID",
+        "process_cpu_usage": "Usage processus du CPU",
+        "system_cpu_usage": "Usage Système du CPU",
+        "title": "Processus",
+        "uptime": "Disponibilité"
+      },
+      "threads": {
+        "daemon": "Démon",
+        "live": "Actifs",
+        "peak_live": "max actifs",
+        "title": "Threads"
+      }
+    }
+  }
+}

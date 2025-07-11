@@ -1,0 +1,10 @@
+{
+  "instances": {
+    "heapdump": {
+      "label": "Heap-Dump",
+      "download": "Heap-Dump herunterladen",
+      "warn_dump_expensive": "Das Erzeugen eines Heap-Dumps kann die CPU und Festplatte stark belasten.",
+      "warn_sensitive_data": "Ein Heap-Dump kann sensible Daten enthalten. Bitte sorgsam behandeln."
+    }
+  }
+}

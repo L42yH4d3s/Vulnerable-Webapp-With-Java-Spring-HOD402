@@ -1,0 +1,18 @@
+{
+  "instances": {
+    "loggers": {
+      "label": "Logger",
+      "application": "Anwendung",
+      "fetch_failed_some_instances": "Das Laden der Log-Informationen {failed} von {count} Instanzen ist fehlgeschlagen. Für diese wird das Konfigurieren der Logger sehr wahrscheinlich fehlschlagen.",
+      "filter": {
+        "class_only": "nur Klassen",
+        "configured": "konfiguriert"
+      },
+      "instance": "Instanz",
+      "new": "neu",
+      "no_loggers_found": "Keine Logger gefunden.",
+      "reset": "Zurücksetzen",
+      "setting_loglevel_failed": "Fehler beim Setzen des Loglevels '{loglevel}' für den Logger '{logger}'."
+    }
+  }
+}

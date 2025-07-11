@@ -1,0 +1,12 @@
+{
+  "instances": {
+    "beans": {
+      "label": "Baunir",
+      "name": "Nafn",
+      "aliases": "Samnefni",
+      "type": "Gerð",
+      "resource": "Resource",
+      "dependencies": "Fylgni"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "instances": {
+    "details": {
+      "label": "Smáatriði",
+      "cache": {
+        "hit_ratio": "Hit ratio",
+        "hits": "Hits",
+        "misses": "Misses",
+        "size": "Stærð"
+      },
+      "datasource": {
+        "active_connections": "Virk tengsl",
+        "min_connections": "Lágmarksfjöldi af tengslum",
+        "max_connections": "Hámarksfjöldi af tengslunum",
+        "title": "Gagnagjafi: {datasource}",
+        "unlimited": "ótakmarkaður"
+      },
+      "gc": {
+        "count": "Fjöldi",
+        "time_spent_max": "Hámarkstímalengd",
+        "time_spent_total": "Heildartími",
+        "title": "GC hlé"
+      },
+      "health": {
+        "title": "Staða"
+      },
+      "info": {
+        "no_info_provided": "Engar upplýsingar eru í boði.",
+        "title": "Upplýsingar"
+      },
+      "memory": {
+        "max": "Hámark",
+        "metaspace": "Metaspace",
+        "size": "Stærð",
+        "title": "Geymir",
+        "used": "I notkun"
+      },
+      "metadata": {
+        "no_data_provided": "Engin lysigögn i boði.",
+        "title": "Lysigögn"
+      },
+      "process": {
+        "cpus": "CPUs",
+        "pid": "PID",
+        "process_cpu_usage": "CPU notkun (%)",
+        "system_cpu_usage": "Kerfi notkun (%)",
+        "title": "Ferli",
+        "uptime": "Uptime"
+      },
+      "threads": {
+        "daemon": "Þjónn (daemon)",
+        "live": "Live",
+        "peak_live": "Peak Live",
+        "title": "Þræðir"
+      }
+    }
+  }
+}

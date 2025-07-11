@@ -1,0 +1,42 @@
+KẾT QUẢ GIẢI MÃ MẬT KHẨU
+==================================================
+User ID: 1
+Username: admin
+Hashed Password: $2a$10$fixedSaltForDevEnviroeEyfwSD6z6BIeNn.G.fbkEbSWXwAOj3a
+Decrypted Password: admin
+--------------------------------------------------
+User ID: 2
+Username: seller1
+Hashed Password: $2a$10$fixedSaltForDevEnviroexOyHpwG6ZzSdJB/mDbOs3KexfdxfKzO
+Decrypted Password: seller1
+--------------------------------------------------
+User ID: 3
+Username: seller2
+Hashed Password: $2a$10$fixedSaltForDevEnviroeH0m0PkFTZ8sSMwlkWNpbwecx4xcPvbq
+Decrypted Password: seller2
+--------------------------------------------------
+User ID: 4
+Username: seller3
+Hashed Password: $2a$10$fixedSaltForDevEnviroejyKvEmeaXig2rHsjUiYpaTie80F3Fya
+Decrypted Password: seller3
+--------------------------------------------------
+User ID: 5
+Username: user
+Hashed Password: $2a$10$fixedSaltForDevEnviroewfLdAaKCC7uYkWK4cVRXY.qzyDz02zG
+Decrypted Password: user
+--------------------------------------------------
+User ID: 6
+Username: user2
+Hashed Password: $2a$10$fixedSaltForDevEnviroeIHVGmm6/2sNC8cmgrT6X45c8mqHRp1q
+Decrypted Password: user2
+--------------------------------------------------
+User ID: 7
+Username: user3
+Hashed Password: $2a$10$fixedSaltForDevEnviroeHr8kyVOri3JO7f5kDy7/.KTtdUQq2k2
+Decrypted Password: user3
+--------------------------------------------------
+User ID: 8
+Username: hung
+Hashed Password: $2a$10$fixedSaltForDevEnviroeREi5hZ1MAarjmh/ZNTXq3oCCPY.Wi6u
+Decrypted Password: hung
+--------------------------------------------------

@@ -1,0 +1,14 @@
+{
+  "instances": {
+    "startup": {
+      "label": "Ræsitími",
+      "expand_all": "Þenjast allt út",
+
+      "column": {
+        "name": "Nafn",
+        "duration": "Tímalengd (ms)",
+        "details": "Smáatriði"
+      }
+    }
+  }
+}

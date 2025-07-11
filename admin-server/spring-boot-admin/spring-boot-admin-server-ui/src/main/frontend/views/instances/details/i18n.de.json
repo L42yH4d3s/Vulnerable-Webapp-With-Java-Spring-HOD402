@@ -1,0 +1,58 @@
+{
+  "instances": {
+    "details": {
+      "label": "Details",
+      "cache": {
+        "hit_ratio": "Treffer-Rate",
+        "hits": "Treffer",
+        "misses": "Fehltreffer",
+        "size": "Größe"
+      },
+      "datasource": {
+        "active_connections": "Aktive Verbindungen",
+        "min_connections": "Min. Verbindungen",
+        "max_connections": "Max. Verbindungen",
+        "title": "Datenquelle: {datasource}",
+        "unlimited": "unlimitiert"
+      },
+      "gc": {
+        "count": "Anzahl",
+        "time_spent_max": "Max. Zeitdauer",
+        "time_spent_total": "Gesamtzeit",
+        "title": "GC Pausen"
+      },
+      "health": {
+        "title": "Zustand"
+      },
+      "info": {
+        "no_info_provided": "Keine Informationen verfügbar.",
+        "title": "Info"
+      },
+      "memory": {
+        "max": "Max",
+        "metaspace": "Metaspace",
+        "size": "Größe",
+        "title": "Speicher",
+        "used": "In Verwendung"
+      },
+      "metadata": {
+        "no_data_provided": "Keine Metadaten vorhanden",
+        "title": "Metadaten"
+      },
+      "process": {
+        "cpus": "CPUs",
+        "pid": "PID",
+        "process_cpu_usage": "CPU-Auslastung (%)",
+        "system_cpu_usage": "System-Auslastung (%)",
+        "title": "Prozess",
+        "uptime": "Uptime"
+      },
+      "threads": {
+        "daemon": "Daemon",
+        "live": "Live",
+        "peak_live": "Peak Live",
+        "title": "Threads"
+      }
+    }
+  }
+}

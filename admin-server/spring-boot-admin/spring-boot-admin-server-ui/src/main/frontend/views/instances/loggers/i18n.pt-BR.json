@@ -1,0 +1,17 @@
+{
+  "instances": {
+    "loggers": {
+      "label": "Loggers",
+      "application": "Aplicação",
+      "filter": {
+        "class_only": "somente classe",
+        "configured": "configurado"
+      },
+      "instance": "Instancia",
+      "new": "novo",
+      "no_loggers_found": "Nunhum logger foi encontrado.",
+      "reset": "Redefinir",
+      "setting_loglevel_failed": "A configuração de {logger} como {loglevel} falhou."
+    }
+  }
+}

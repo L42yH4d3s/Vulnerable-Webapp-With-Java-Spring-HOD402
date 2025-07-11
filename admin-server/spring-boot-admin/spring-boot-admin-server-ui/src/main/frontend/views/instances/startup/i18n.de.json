@@ -1,0 +1,14 @@
+{
+  "instances": {
+    "startup": {
+      "label": "Startup",
+      "expand_all": "Alle aufklappen",
+
+      "column": {
+        "name": "Name",
+        "duration": "Dauer (ms)",
+        "details": "Details"
+      }
+    }
+  }
+}

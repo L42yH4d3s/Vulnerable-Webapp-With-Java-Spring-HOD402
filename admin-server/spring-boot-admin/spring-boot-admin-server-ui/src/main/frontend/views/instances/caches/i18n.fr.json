@@ -1,0 +1,11 @@
+{
+  "instances": {
+    "caches": {
+      "label": "Caches",
+      "cache_manager": "Manager de cache",
+      "loading": "Chargement des Caches...",
+      "name": "Nom",
+      "no_caches_found": "Aucun caches trouvés."
+    }
+  }
+}

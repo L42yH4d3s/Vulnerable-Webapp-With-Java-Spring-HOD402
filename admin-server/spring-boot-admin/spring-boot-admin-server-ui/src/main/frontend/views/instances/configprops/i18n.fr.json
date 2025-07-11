@@ -1,0 +1,9 @@
+{
+  "instances": {
+    "configprops": {
+      "label": "Propriétés de configuration",
+
+      "no_properties_set": "Aucune propriétés définies"
+    }
+  }
+}

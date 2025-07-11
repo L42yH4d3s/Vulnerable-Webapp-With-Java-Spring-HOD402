@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>Product Recommendations</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .recommendation-form {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .recommendation-form input, .recommendation-form select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .recommendation-form button {
+            background: #28a745;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .recommendation-form button:hover {
+            background: #218838;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background: white;
+            position: relative;
+        }
+        .product-card::before {
+            content: "⭐ Recommended";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ffc107;
+            color: #212529;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        .product-card h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .price {
+            font-size: 1.2em;
+            color: #007bff;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .seller {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .no-recommendations {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: #007bff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .nav-link:hover {
+            background: #e9ecef;
+        }
+        .ai-badge {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2>AI Product Recommendations <span class="ai-badge">AI Powered</span></h2>
+            <div>
+                <a href="/products" class="nav-link">Back to Products</a>
+                <a href="/home" class="nav-link">Home</a>
+            </div>
+        </div>
+
+        <div class="recommendation-form">
+            <form method="get" action="/products/recommendations">
+                <input type="text" name="userPreference" th:value="${userPreference}" placeholder="What are you looking for? (e.g., gaming, office, outdoor)">
+                <select name="category">
+                    <option value="">All Categories</option>
+                    <option value="electronics" th:selected="${category == 'electronics'}">Electronics</option>
+                    <option value="clothing" th:selected="${category == 'clothing'}">Clothing</option>
+                    <option value="books" th:selected="${category == 'books'}">Books</option>
+                    <option value="sports" th:selected="${category == 'sports'}">Sports</option>
+                </select>
+                <input type="number" name="budget" th:value="${budget}" placeholder="Max budget ($)">
+                <button type="submit">Get Recommendations</button>
+            </form>
+        </div>
+
+        <div th:if="${error}" class="error" th:text="${error}"></div>
+
+        <div th:if="${userPreference}" style="margin-bottom: 20px;">
+            <p>Recommendations based on: <strong th:text="${userPreference}"></strong></p>
+            <p th:if="${budget}">Budget: <strong>$<span th:text="${budget}"></span></strong></p>
+            <p th:if="${category}">Category: <strong th:text="${category}"></strong></p>
+        </div>
+
+        <div th:if="${not #lists.isEmpty(recommendations)}" class="product-grid">
+            <div th:each="product : ${recommendations}" class="product-card">
+                <h3 th:text="${product.name}">Product Name</h3>
+                <p th:text="${product.description}">Description</p>
+                <div class="price" th:text="'$' + ${#numbers.formatDecimal(product.price, 1, 2)}">$0.00</div>
+                <div class="seller" th:text="'Seller: ' + ${product.seller.username}">Seller</div>
+            </div>
+        </div>
+
+        <div th:if="${#lists.isEmpty(recommendations) and userPreference}" class="no-recommendations">
+            <h3>No recommendations found</h3>
+            <p>Try adjusting your preferences or browse all products.</p>
+        </div>
+
+        <div th:if="${not userPreference}" class="no-recommendations">
+            <h3>Get Personalized Recommendations</h3>
+            <p>Tell us what you're looking for and we'll suggest the best products for you!</p>
+            <p><em>Our AI analyzes your preferences to find the perfect matches.</em></p>
+        </div>
+    </div>
+</body>
+</html> 

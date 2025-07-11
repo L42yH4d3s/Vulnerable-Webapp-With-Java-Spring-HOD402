@@ -1,0 +1,9 @@
+{
+  "instances": {
+    "logfile": {
+      "label": "Log",
+      "download": "Herunterladen",
+      "wrap_lines": "Zeilen umbrechen"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "instances": {
+    "liquibase": {
+      "label": "Liquibase",
+      "author": "Höfundur",
+      "changelog": "Breytingaferill",
+      "checksum": "Prófsumma",
+      "comments": "Athugasemdir",
+      "contexts": "Samhengi",
+      "deployment_id": "Deployment Id",
+      "description": "Lýsing",
+      "execution": "Framkvæmd",
+      "execution_date": "Dagsetning framkvæmdarinnar",
+      "execution_order": "Röð framkvæmdarinnar",
+
+      "id": "Id",
+      "labels": "Merkimiðar",
+      "tag": "Merki"
+    }
+  }
+}

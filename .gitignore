@@ -1,0 +1,57 @@
+# Compiled class files
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# IntelliJ IDEA
+*.iml
+.idea/
+out/
+
+# VS Code
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db 
+
+# Sensitive config and data files
+web-app-client-demo/src/main/resources/application.properties
+web-app-client-demo/src/main/resources/application-dev.properties
+web-app-client-demo/src/main/resources/application-prod.properties
+web-app-client-demo/src/main/resources/data-dev.sql
+web-app-client-demo/src/main/resources/data-prod.sql
+web-app-client-demo/src/main/resources/update.sql
+web-app-client-demo/src/main/resources/schema.sql 

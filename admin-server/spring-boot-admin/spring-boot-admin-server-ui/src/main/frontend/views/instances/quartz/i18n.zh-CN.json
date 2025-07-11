@@ -1,0 +1,8 @@
+{
+  "instances": {
+    "quartz": {
+      "label": "Quartz",
+      "no_data": "没有可用的石英信息"
+    }
+  }
+}

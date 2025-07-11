@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2014-2020 the original author or authors.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>spring-boot-admin-docs</artifactId>
+    <packaging>pom</packaging>
+    <name>Spring Boot Admin Docs</name>
+    <description>Spring Boot Admin Docs</description>
+    <parent>
+        <groupId>de.codecentric</groupId>
+        <artifactId>spring-boot-admin-build</artifactId>
+        <version>${revision}</version>
+        <relativePath>../spring-boot-admin-build</relativePath>
+    </parent>
+
+    <properties>
+        <site.skin.version>2.3.2</site.skin.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${maven-site-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>output-html</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>target/generated-docs</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- Disable generateReports if you don't want to include the built-in reports -->
+                    <generateReports>false</generateReports>
+                    <generateSitemap>false</generateSitemap>
+                    <relativizeDecorationLinks>false</relativizeDecorationLinks>
+                    <locales>en</locales>
+                    <inputEncoding>UTF-8</inputEncoding>
+                    <outputEncoding>UTF-8</outputEncoding>
+                    <asciidoc>
+                        <!-- Optional site-wide AsciiDoc attributes -->
+                        <attributes>
+                            <icons>font</icons>
+                            <source-highlighter>coderay</source-highlighter>
+                            <commit-id>${git.commit.id.abbrev}</commit-id>
+                            <commit-time>${git.commit.time}</commit-time>
+                            <project-version>${project.version}</project-version>
+                            <spring-cloud-version>${spring-cloud.version}</spring-cloud-version>
+                            <samples-dir>${basedir}/../spring-boot-admin-samples/</samples-dir>
+                            <main-dir>${basedir}/../</main-dir>
+                            <github-src>https://github.com/codecentric/spring-boot-admin/tree/master</github-src>
+                        </attributes>
+                    </asciidoc>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctor-maven-plugin</artifactId>
+                        <version>${asciidoctor-maven-plugin.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.bernardomg.maven.skins</groupId>
+                        <artifactId>docs-maven-skin</artifactId>
+                        <version>${site.skin.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.4.5</version>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>

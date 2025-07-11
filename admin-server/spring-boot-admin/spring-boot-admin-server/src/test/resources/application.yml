@@ -1,0 +1,17 @@
+server:
+    port: 8080
+spring:
+    application:
+        name: spring-boot-admin-server-test
+    jmx:
+        enabled: false
+    mvc:
+      pathmatch:
+        matching-strategy: ant_path_matcher
+management:
+  info:
+    env:
+      enabled: true
+logging:
+  level:
+    de.codecentric: DEBUG

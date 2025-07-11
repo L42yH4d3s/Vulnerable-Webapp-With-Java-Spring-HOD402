@@ -1,0 +1,9 @@
+{
+  "instances": {
+    "logfile": {
+      "label": "Logfile",
+      "download": "Download",
+      "wrap_lines": "Wrap lines"
+    }
+  }
+}

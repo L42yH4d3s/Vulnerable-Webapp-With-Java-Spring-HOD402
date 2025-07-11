@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Results</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-form {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .search-form input, .search-form select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .search-form button {
+            background: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-form button:hover {
+            background: #0056b3;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background: white;
+        }
+        .product-card h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .price {
+            font-size: 1.2em;
+            color: #007bff;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .seller {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: #007bff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .nav-link:hover {
+            background: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2>Product Search</h2>
+            <div>
+                <a href="/products" class="nav-link">Back to Products</a>
+                <a href="/home" class="nav-link">Home</a>
+            </div>
+        </div>
+
+        <div class="search-form">
+            <form method="get" action="/products/search">
+                <input type="text" name="keyword" th:value="${searchKeyword}" placeholder="Search products...">
+                <select name="category">
+                    <option value="">All Categories</option>
+                    <option value="electronics" th:selected="${searchCategory == 'electronics'}">Electronics</option>
+                    <option value="clothing" th:selected="${searchCategory == 'clothing'}">Clothing</option>
+                    <option value="books" th:selected="${searchCategory == 'books'}">Books</option>
+                </select>
+                <select name="priceRange">
+                    <option value="">All Prices</option>
+                    <option value="0-50" th:selected="${searchPriceRange == '0-50'}">$0 - $50</option>
+                    <option value="50-100" th:selected="${searchPriceRange == '50-100'}">$50 - $100</option>
+                    <option value="100+" th:selected="${searchPriceRange == '100+'}">$100+</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <div th:if="${error}" class="error" th:text="${error}"></div>
+
+        <div th:if="${searchKeyword}" style="margin-bottom: 20px;">
+            <p>Search results for: <strong th:text="${searchKeyword}"></strong></p>
+            <p th:if="${products.size() > 0}">Found <span th:text="${products.size()}"></span> product(s)</p>
+        </div>
+
+        <div th:if="${not #lists.isEmpty(products)}" class="product-grid">
+            <div th:each="product : ${products}" class="product-card">
+                <h3 th:text="${product.name}">Product Name</h3>
+                <p th:text="${product.description}">Description</p>
+                <div class="price" th:text="'$' + ${#numbers.formatDecimal(product.price, 1, 2)}">$0.00</div>
+                <div class="seller" th:text="'Seller: ' + ${product.seller.username}">Seller</div>
+            </div>
+        </div>
+
+        <div th:if="${#lists.isEmpty(products) and searchKeyword}" class="no-results">
+            <h3>No products found</h3>
+            <p>Try adjusting your search criteria or browse all products.</p>
+        </div>
+
+        <div th:if="${not searchKeyword}" class="no-results">
+            <h3>Enter a search term to find products</h3>
+            <p>Use the search form above to find specific products.</p>
+        </div>
+    </div>
+</body>
+</html> 

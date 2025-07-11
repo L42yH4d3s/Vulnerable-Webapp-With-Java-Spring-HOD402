@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload Revenue</title>
+</head>
+<body>
+<h2>Upload Revenue</h2>
+<form method="post" enctype="multipart/form-data" th:action="@{/seller/revenue/upload}">
+    <label>Chọn file:</label>
+    <input type="file" name="file"/>
+    <button type="submit">Upload</button>
+</form>
+<p th:if="${error}" th:text="${error}" style="color:red;"></p>
+<p th:if="${message}" th:text="${message}" style="color:green;"></p>
+<div th:if="${month}">
+    <p><strong>Tháng:</strong> <span th:text="${month}"></span></p>
+    <p><strong>Dữ liệu:</strong> <span th:text="${data}"></span></p>
+</div>
+</body>
+</html>

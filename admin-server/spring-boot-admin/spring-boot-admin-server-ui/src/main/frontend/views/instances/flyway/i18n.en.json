@@ -1,0 +1,17 @@
+{
+  "instances": {
+    "flyway": {
+      "label": "Flyway",
+      "type": "Type",
+      "checksum": "Checksum",
+      "version": "Version",
+      "description": "Description",
+      "script": "Script",
+      "state": "State",
+      "installed_by": "Installed by",
+      "installed_on": "Installed on",
+      "installed_rank": "Installed rank",
+      "execution_time": "Execution Time"
+    }
+  }
+}

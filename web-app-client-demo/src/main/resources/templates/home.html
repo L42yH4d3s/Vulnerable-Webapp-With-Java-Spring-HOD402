@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head th:replace="~{fragments/layout :: head('Home')}">
+</head>
+<body>
+<div class="container">
+    <div th:replace="~{fragments/layout :: header}"></div>
+    <div class="content">
+        <h2>Welcome to Our Application</h2>
+        <p>This is a secure web application with various features.</p>
+
+        <div sec:authorize="hasRole('ADMIN')">
+            <h3>Admin Features</h3>
+            <ul>
+                <li><a th:href="@{/users}">Manage Users</a></li>
+                <li><a th:href="@{/products/manage}">Manage All Products</a></li>
+            </ul>
+        </div>
+
+        <div sec:authorize="hasRole('SELLER')">
+            <h3>Seller Features</h3>
+            <ul>
+                <li><a th:href="@{/products/manage}">Manage My Products</a></li>
+                <li><a th:href="@{/products/add}">Add New Product</a></li>
+                <li><a th:href="@{/seller/revenue/upload}">Upload Revenue</a></li>
+
+            </ul>
+        </div>
+
+        <div sec:authorize="hasRole('USER')">
+            <h3>User Features</h3>
+            <ul>
+                <li><a th:href="@{/products}">Browse Products</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

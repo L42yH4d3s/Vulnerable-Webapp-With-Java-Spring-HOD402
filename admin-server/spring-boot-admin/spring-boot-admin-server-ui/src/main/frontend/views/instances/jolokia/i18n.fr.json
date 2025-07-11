@@ -1,0 +1,14 @@
+{
+  "instances": {
+    "jolokia": {
+      "label": "JMX",
+      "close": "Fermer",
+      "domains": "Domaines",
+      "execute": "Exécuter",
+      "executing": "Exécution...",
+      "execution_failed": "Execution en échec.",
+      "execution_successful": "Execution en succès.",
+      "mbeans": "MBeans"
+    }
+  }
+}

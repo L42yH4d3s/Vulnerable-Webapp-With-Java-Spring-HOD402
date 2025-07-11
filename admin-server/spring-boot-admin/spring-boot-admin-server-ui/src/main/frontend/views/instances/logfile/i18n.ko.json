@@ -1,0 +1,8 @@
+{
+  "instances": {
+    "logfile": {
+      "label": "로그파일",
+      "download": "다운로드"
+    }
+  }
+}

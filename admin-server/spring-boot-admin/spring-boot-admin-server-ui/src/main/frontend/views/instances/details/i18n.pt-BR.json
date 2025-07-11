@@ -1,0 +1,57 @@
+{
+  "instances": {
+    "details": {
+      "label": "Detalhes",
+      "cache": {
+        "hit_ratio": "Hit ratio",
+        "hits": "Hits",
+        "size": "Tamanho"
+      },
+      "datasource": {
+        "active_connections": "Conexões ativas",
+        "min_connections": "Conexões mínimas",
+        "max_connections": "Conexões máximas",
+        "title": "Datasource: {datasource}",
+        "unlimited": "ilimitado"
+      },
+      "gc": {
+        "count": "Contador",
+        "time_spent_max": "Tempo máximo gasto",
+        "time_spent_total": "Tempo total gasto",
+        "title": "Pausas do Garbage Collection"
+      },
+      "health": {
+        "title": "Integridade"
+      },
+      "info": {
+        "no_info_provided": "Nenhuma informação fornecida.",
+        "title": "Info"
+      },
+      "memory": {
+        "max": "Máximo",
+        "metaspace": "Metaspace",
+        "size": "Tamanho",
+        "title": "Memoria",
+        "used": "Usado"
+      },
+      "metadata": {
+        "no_data_provided": "Nenhum metadado fornecido.",
+        "title": "Metadado"
+      },
+      "process": {
+        "cpus": "CPUs",
+        "pid": "PID",
+        "process_cpu_usage": "Uso de Process CPU",
+        "system_cpu_usage": "Uso de System CPU",
+        "title": "Processo",
+        "uptime": "Uptime"
+      },
+      "threads": {
+        "daemon": "Daemon",
+        "live": "Ativos",
+        "peak_live": "Peak Live",
+        "title": "Threads"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "instances": {
+    "jolokia": {
+      "label": "JMX",
+      "close": "Schließen",
+      "domains": "Domains",
+      "execute": "Ausführen",
+      "executing": "Führe aus...",
+      "execute_modal_header": "<code>{name}</code> ausführen?",
+      "execution_failed": "Ausführung fehlgeschlagen.",
+      "execution_successful": "Ausführung erfolgreich.",
+      "mbeans": "MBeans"
+    }
+  }
+}

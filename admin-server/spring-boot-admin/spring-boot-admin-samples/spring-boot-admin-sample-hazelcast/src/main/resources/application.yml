@@ -1,0 +1,24 @@
+---
+logging:
+  file:
+    name: "target/boot-admin-sample-hazelcast.log"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+spring:
+  application:
+    name: spring-boot-admin-sample-hazelcast
+  boot:
+    admin:
+      client:
+        url: http://localhost:${server.port:8080}
+  profiles:
+    active:
+      - insecure

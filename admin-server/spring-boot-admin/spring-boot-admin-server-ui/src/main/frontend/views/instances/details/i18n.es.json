@@ -1,0 +1,61 @@
+{
+  "instances": {
+    "details": {
+      "label": "Detalles",
+
+      "cache": {
+        "hit_ratio": "Índice de aciertos",
+        "hits": "Aciertos",
+        "misses": "Fallas",
+        "size": "Tamaño"
+      },
+      "datasource": {
+        "active_connections": "Conexiones activas",
+        "min_connections": "Conexiones Min",
+        "max_connections": "Conexiones Max ",
+        "title": "Fuente de datos: {datasource}",
+        "unlimited": "Sin límites"
+      },
+      "gc": {
+        "count": "Cantidad",
+        "time_spent_max": "Tiempo máximo utilizado",
+        "time_spent_total": "Tiempo total utilizado",
+        "title": "Pausas en la recolección de basura"
+      },
+      "health": {
+        "title": "Salud"
+      },
+      "info": {
+        "no_info_provided": "No hay información provista.",
+        "title": "Info"
+      },
+      "memory": {
+        "max": "Max",
+        "metaspace": "Metaspace",
+        "size": "Tamaño",
+        "title": "Memoria",
+        "used": "Usada"
+      },
+      "metadata": {
+        "no_data_provided": "No hay metadatos provistos.",
+        "title": "Metadatos"
+      },
+      "process": {
+        "cpus": "CPUs",
+
+        "pid": "PID",
+        "process_cpu_usage": "Uso CPU proceso",
+        "system_cpu_usage": "Uso CPU sistema",
+        "title": "Proceso",
+        "uptime": "Tiempo de actividad"
+      },
+      "threads": {
+        "daemon": "Daemon",
+
+        "live": "En vivo",
+        "peak_live": "Pico en vivo",
+        "title": "Hilos"
+      }
+    }
+  }
+}

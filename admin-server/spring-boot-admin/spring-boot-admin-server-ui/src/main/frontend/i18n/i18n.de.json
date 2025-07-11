@@ -1,0 +1,50 @@
+{
+  "error": {
+    "server_connection_failed": "Verbindung zum Server fehlgeschlagen."
+  },
+  "term": {
+    "affects_all_instances": "Betrifft alle {count} Instanzen",
+    "affects_this_instance_only": "Betrifft nur diese Instanz",
+    "application": "Anwendung",
+    "attributes": "Attribute",
+    "bytes": "Bytes",
+    "cancel": "Abbrechen",
+    "clear": "Leeren",
+    "cleared": "Geleert",
+    "close": "Schließen",
+    "confirm": "Bestätigen",
+    "delete": "Löschen",
+    "deleted": "Gelöscht",
+    "duration": "Dauer",
+    "event": "Ereignis",
+    "ever": "immer",
+    "executing": "Wird ausgeführt...",
+    "execution_failed": "Ausführung fehlgeschlagen.",
+    "execution_successful": "Ausführung erfolgreich.",
+    "failed": "Fehlgeschlagen",
+    "fetching_data": "Lade Daten...",
+    "fetch_failed": "Abruf der Daten fehlgeschlagen.",
+    "float": "Float",
+    "hours": "{count} Stunde | {count} Stunden",
+    "instance": "Instanz",
+    "instances": "Instanzen",
+    "integer": "Integer",
+    "menu": {
+      "open": "Menü öffnen"
+    },
+    "milliseconds": "Millisekunden",
+    "minutes": "{count} Minute | {count} Minuten",
+    "name": "Name",
+    "operations": "Operationen",
+    "save": "Speichern",
+    "stacktrace": "Stacktrace",
+    "suppress": "Unterdrücken",
+    "time": "Zeit",
+    "unsuppress": "Reaktivieren",
+    "username": "Username",
+    "go_to_previous_page": "Gehe zur vorherigen Seite",
+    "go_to_page_n": "Gehe zu Seite {page}",
+    "current_page": "Seite {page}, aktuelle Seite",
+    "go_to_next_page": "Gehe zur nächsten Seite"
+  }
+}

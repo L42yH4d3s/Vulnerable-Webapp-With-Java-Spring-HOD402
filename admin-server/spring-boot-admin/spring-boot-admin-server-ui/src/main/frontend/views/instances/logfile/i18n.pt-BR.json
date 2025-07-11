@@ -1,0 +1,8 @@
+{
+  "instances": {
+    "logfile": {
+      "label": "Arquivo de Log",
+      "download": "Download"
+    }
+  }
+}
